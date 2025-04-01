@@ -1,0 +1,5 @@
+allure-pytest
+pydantic-settings
+pytest
+requests
+urllib3
