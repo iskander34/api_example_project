@@ -3,3 +3,4 @@ pydantic-settings
 pytest
 requests
 urllib3
+allure-python-commons
