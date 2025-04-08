@@ -7,26 +7,22 @@ from lib.logger import Logger
 
 class HTTPClient:
 
-    @staticmethod
+    @allure.step("Making DELETE request to URL '{url}'")
     def delete(url: str, auth: str = None, data: dict = None, headers: dict = None, cookies: dict = None):
-        with allure.step(f"DELETE request to URL '{url}'"):
-            return HTTPClient._send(url, data, headers, cookies, auth, "DELETE")
+        return HTTPClient._send(url, data, headers, cookies, auth, "DELETE")
 
-    @staticmethod
+    @allure.step("Making GET request to URL '{url}'")
     def get(url: str, auth: str = None, data: dict = None, headers: dict = None, cookies: dict = None):
-        with allure.step(f"GET request to URL '{url}'"):
-            return HTTPClient._send(url, data, headers, cookies, auth, "GET")
+        return HTTPClient._send(url, data, headers, cookies, auth, "GET")
 
-    @staticmethod
+    @allure.step("Making POST request to URL '{url}'")
     def post(url: str, auth: str = None, data: dict = None, files: dict = None, headers: dict = None,
              cookies: dict = None):
-        with allure.step(f"POST request to URL '{url}'"):
-            return HTTPClient._send(url, data, headers, cookies, auth, "POST", files)
+        return HTTPClient._send(url, data, headers, cookies, auth, "POST", files)
 
-    @staticmethod
+    @allure.step("Making PUT request to URL '{url}'")
     def put(url: str, auth: str = None, data: dict = None, headers: dict = None, cookies: dict = None):
-        with allure.step(f"PUT request to URL '{url}'"):
-            return HTTPClient._send(url, data, headers, cookies, auth, "PUT")
+        return HTTPClient._send(url, data, headers, cookies, auth, "PUT")
 
     @staticmethod
     def _send(url: str, data: dict, headers: dict, cookies: dict, auth: str, method: str, files: dict = None):

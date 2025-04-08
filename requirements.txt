@@ -1,6 +1,8 @@
 allure-pytest
+allure-python-commons
+httpx
+playwright
 pydantic-settings
 pytest
 requests
 urllib3
-allure-python-commons
